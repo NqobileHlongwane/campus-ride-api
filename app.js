@@ -12,7 +12,9 @@ const PORT = 3000;
 app.use(express.json());
 app.use(morgan("dev"));
 
-
+app.get("/", (req, res) => {
+  res.send("CampusRide API is running . Use /rides to interact.");
+});
 
 // Routes
 app.use("/rides", ridesRouter);
